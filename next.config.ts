@@ -1,9 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable SWR (Stale-While-Revalidate) for better caching
-  swcMinify: true,
-
   // Image optimization
   images: {
     remotePatterns: [
@@ -68,16 +65,6 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["@radix-ui/react-*"],
   },
 
-  // Turbopack config for faster builds
-  turbo: {
-    rules: {
-      "*.svg": {
-        loaders: ["@svgr/webpack"],
-        as: "*.js",
-      },
-    },
-  },
-
   // Enable React strict mode for development
   reactStrictMode: true,
 
@@ -90,7 +77,7 @@ const nextConfig: NextConfig = {
   // Production source maps (disabled for smaller bundle)
   productionBrowserSourceMaps: false,
 
-  // Powering by Vercel
+  // Hide Vercel header
   poweredByHeader: false,
 };
 
