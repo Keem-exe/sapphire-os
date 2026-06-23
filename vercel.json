@@ -1,0 +1,38 @@
+{
+  "name": "Sapphire OS",
+  "version": "0.1.0",
+  "env": {
+    "NEXT_PUBLIC_API_URL": {
+      "description": "Base URL for API calls",
+      "required": false,
+      "default": "http://localhost:3001"
+    },
+    "NEXT_PUBLIC_API_TIMEOUT": {
+      "description": "API request timeout in milliseconds",
+      "required": false,
+      "default": "10000"
+    },
+    "NEXT_PUBLIC_ENABLE_OFFLINE_MODE": {
+      "description": "Enable offline support",
+      "required": false,
+      "default": "true"
+    },
+    "NEXT_PUBLIC_ENVIRONMENT": {
+      "description": "Environment (development, staging, production)",
+      "required": false
+    }
+  },
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "nodeVersion": "20.x",
+  "outputDirectory": ".next",
+  "publicSource": "./public",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "http://localhost:3001/api/:path*"
+    }
+  ]
+}

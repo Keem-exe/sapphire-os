@@ -1,0 +1,53 @@
+# Dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Testing
+.jest
+coverage
+.nyc_output
+
+# Misc
+.DS_Store
+*.pem
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+.next
+out
+dist
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+
+# Git
+.git
+.gitignore
+
+# Documentation
+docs
+IMPLEMENTATION_ROADMAP.md
+PHASE_0_COMPLETION.md
+IMPLEMENTATION_COMPLETE.md
+
+# CI/CD
+.github
+
+# Dev files
+Dockerfile
+docker-compose.yml
+.dockerignore
